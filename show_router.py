@@ -15,7 +15,9 @@ if password:
 
 
 tn.write(b"show ip int br\n")
-tn.write(b"show int status\n")
+tn.write(b"show ip protocols\n")
+tn.write(b"show ip route\n")
+tn.write(b"show version\n")
 tn.write(b"wr mem\n")
 tn.write(b"exit\n")
 
