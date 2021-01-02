@@ -22,8 +22,8 @@ for n in range (2,vlan):
 
 tn.write(b"int e0/0\n")
 tn.write(b"switchport mode access\n")
-tn.write(b"switchport access vlan 2\n")
-tn.write(b"int e0/1\n")
+tn.write(b"switchport access vlan 3\n")
+tn.write(b"int range e0/1,e0/2,e0/3\n")
 tn.write(b"switchport trunk encapsulation dot1q\n")
 tn.write(b"switchport mode trunk\n")
 tn.write(b"end\n")
