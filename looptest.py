@@ -5,7 +5,7 @@ from itertools import count
 import os
 from termcolor import colored
 from pyfiglet import figlet_format
-print((colored(figlet_format("Code By Aung Khant Moe :D"), color="green")))
+print((colored(figlet_format("Code By NIT :D"), color="green")))
 
 for i in count(0):
     try:
