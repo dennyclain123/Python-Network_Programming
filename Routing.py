@@ -15,7 +15,7 @@ if password:
 
 tn.write(b"conf t\n")
 tn.write(b"int g1/0\n")
-tn.write(b"ip address 10.0.0.1 255.255.255.255\n")
+tn.write(b"ip address 10.0.0.1 255.255.255.0\n")
 tn.write(b"int loop 0\n")
 tn.write(b"ip address 1.1.1.1 255.255.255.255\n")
 tn.write(b"router ospf 1\n")
