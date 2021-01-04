@@ -1,0 +1,19 @@
+vlan 10
+name NIT_VLAN_10
+vlan 20
+name NIT_VLAN_20
+exit
+int g0/1
+switchport mode access
+switchport access vlan 10
+int g0/2
+switchport mode access
+switchport access vlan 20
+int vlan 10
+no shut
+ip add 192.168.2.1 255.255.255.0
+int vlan 20
+no shut
+ip add 192.168.3.1 255.255.255.0
+end
+wr mem
