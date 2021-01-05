@@ -3,3 +3,6 @@ sudo apt upgrade
 sudo apt install python3
 sudo apt install python3-pip
 sudo pip3 install netmiko
+
+To install NAPALM
+sudo pip3 install napalm
