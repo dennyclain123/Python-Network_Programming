@@ -1,0 +1,18 @@
+int g1/0
+no shut
+ip add 10.0.0.1 255.255.255.0
+exit
+router isis
+net 49.0001.0000.0000.0001.00
+is-type level-2
+metric-style wide
+exit
+int g0/0
+ip router isis
+int g1/0
+ip router isis
+end
+sh ip int br
+sh ip route
+wr mem
+ 

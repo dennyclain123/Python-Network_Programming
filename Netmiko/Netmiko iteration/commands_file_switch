@@ -1,0 +1,36 @@
+vlan 10
+name NIT_VLAN_10
+vlan 20
+name NIT_VLAN_20
+exit
+int g0/1
+switchport mode access
+switchport access vlan 10
+int g0/2
+switchport mode access
+switchport access vlan 20
+exit
+int vlan 10
+no shut
+ip add 192.168.2.1 255.255.255.0
+int vlan 20
+no shut
+ip add 192.168.3.1 255.255.255.0
+exit
+router isis
+net 49.0001.0000.0000.0002.00
+is-type level-2
+metric-style wide
+exit
+int vlan 1
+ip router isis
+int vlan 10
+ip router isis
+int vlan 20
+ip router isis
+end
+sh ip int br
+sh ip route
+sh vlan br
+sh int status
+wr mem
