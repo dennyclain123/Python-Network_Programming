@@ -1,5 +1,5 @@
 #Written By Aung Khant Moe (Mr.Linux) :3
-from termcolor import colored
+from termcolor import colored,cprint
 import pyfiglet 
 import os
 from pyfiglet import figlet_format
@@ -8,8 +8,7 @@ import sys
 from netaddr import IPAddress
 import time
 
-print((colored(figlet_format("Code By Watoke!!"), color="cyan")))
-
+print((colored(figlet_format("Let's do Subnetting!!"), color="cyan")))
 try:
     #Part 1, Request IP Address from user
     while True:
