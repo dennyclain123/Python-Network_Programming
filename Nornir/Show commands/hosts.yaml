@@ -1,0 +1,23 @@
+---
+R1:
+    hostname: 192.168.1.1
+    groups: 
+        - nit_group
+    data: 
+        routing: isis
+        layer: core
+R2:
+    hostname: 192.168.1.2
+    groups: 
+        - nit_group
+    data: 
+        routing: isis
+        layer: core
+
+Sw1:
+    hostname: 192.168.1.3
+    groups: 
+        - nit_group
+    data: 
+        routing: isis
+        layer: core
