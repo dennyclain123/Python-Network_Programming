@@ -4,14 +4,16 @@ from nornir_netmiko import netmiko_send_command
 import getpass
 
 nr = InitNornir(config_file="config.yaml")
+username = input("Enter the default username: ")
 routers_password = getpass.getpass(prompt="Routers Password: ")
 switches_password = getpass.getpass(prompt="Switches Password: ")
 
+nr.inventory.defaults.username = username
 nr.inventory.groups['routers'].password = routers_password
 nr.inventory.groups['switches'].password = switches_password
 
 def show_command(task):
-    task.run(netmiko_send_command, command_string="show version")
+    task.run(netmiko_send_command, command_string="show version | sec Cisco IOS")
 
 result = nr.run(task=show_command)
 
