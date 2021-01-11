@@ -1,0 +1,5 @@
+---
+routers:
+    platform: 'ios'
+switches:
+    platform: 'ios'

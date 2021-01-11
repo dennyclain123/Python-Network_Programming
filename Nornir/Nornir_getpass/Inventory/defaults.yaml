@@ -1,0 +1,6 @@
+---
+username: nituser
+password: nit
+connection_options:
+    netmiko: 
+        extras: {"fast_cli": True}

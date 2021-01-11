@@ -1,0 +1,20 @@
+---
+R1:
+    hostname: 192.168.122.10
+    groups: 
+        - routers
+
+R2:
+    hostname: 192.168.122.20
+    groups: 
+        - routers
+
+Sw1:
+    hostname: 192.168.122.30
+    groups: 
+        - switches
+
+Sw2:
+    hostname: 192.168.122.40
+    groups: 
+        - switches
