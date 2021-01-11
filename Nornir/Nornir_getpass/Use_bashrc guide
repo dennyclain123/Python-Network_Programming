@@ -1,0 +1,11 @@
+How to import Nornir's username and password into bashrc
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+1. Open Terminal
+2. nano (or) vim ~/.bashrc
+3. write as follows:
+	export NIT_USER="nituser"
+	export NIT_PASS="nit"
+4. Type:
+	source ~/.bashrc
+5. Run the Script
