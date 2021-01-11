@@ -7,6 +7,8 @@ import random
 import sys
 from netaddr import IPAddress
 import time
+from time import sleep
+from progress.bar import Bar
 
 print((colored(figlet_format("Let's do Subnetting!!"), color="cyan")))
 try:
@@ -139,13 +141,10 @@ try:
         
     #Outputs for selected IP and Subnet Mask
 
-    animation = "|/-\\"
-
-    for i in range(50):
-        time.sleep(0.1)
-        sys.stdout.write("\r" + "Generating, Please Wait....." + animation[i % len(animation)])
-        sys.stdout.flush()
-
+    with Bar('Calculating...') as bar:
+        for i in range(100):
+            sleep(0.02)
+            bar.next()
     print("\n")
     print("Network address is: %s" % network_address)
     print("Broadcast address is: %s" % broadcast_address)
@@ -155,7 +154,7 @@ try:
     print("\n") 
 
     while True:
-        generate = input("Generate random IP address from this subnet? (y/n)")
+        generate = input("Generate random IP address from this subnet? (y/n): ")
             
         if generate == "y":
             generated_ip = []
