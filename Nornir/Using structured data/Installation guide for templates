@@ -1,0 +1,17 @@
+To download ntc_tempate
+**********************
+
+sudo apt update
+sudo apt install git //if you don't have git
+git clone https://github.com/networktocode/ntc-templates.git
+
+To install Genie Parser
+**********************
+sudo apt update
+sudo pip3 install genie
+sudo pip3 install pyats
+
+To install NAPALM getters
+*************************
+sudo apt update
+sudo pip3 install nornir_napalm
