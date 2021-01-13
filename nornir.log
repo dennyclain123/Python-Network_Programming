@@ -1,0 +1,180 @@
+2021-01-13 15:46:12,951 -  nornir.core -     INFO -        run() - Running task 'getters' with args {} on 1 hosts
+2021-01-13 15:46:28,437 - nornir.core.task -    ERROR -      start() - Host 'CSR': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli/transport/ptyprocess.py", line 395, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 103, in _authenticate
+    new_output = self.session.read()
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli/transport/ptyprocess.py", line 400, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf_get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir/core/inventory.py", line 440, in get_connection
+    self.open_connection(
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir/core/inventory.py", line 492, in open_connection
+    conn_obj.open(
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 166, in open
+    connection.open()
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli_netconf/driver/driver.py", line 64, in open
+    login_bytes = self.transport.open_netconf()
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 38, in open_netconf
+    login_bytes = self._open_netconf_pty()
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 58, in _open_netconf_pty
+    login_bytes: bytes = self._authenticate()
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in decorate
+    return self.multiprocessing_timeout(
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli/decorators.py", line 286, in multiprocessing_timeout
+    result = future.get(timeout=self.timeout_duration)
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 107, in _authenticate
+    self._ssh_message_handler(output=output)
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli/transport/systemssh.py", line 286, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host ios-xe-mgmt.cisco.com
+
+2021-01-13 15:46:28,439 - nornir.core.task -    ERROR -      start() - Host 'CSR': task 'getters' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/mr_linux/Desktop/Py_Net scripts/Nornir/NETCONF_Plugins/NETCONF_getters.py", line 11, in getters
+    result = task.run(task=netconf_get_config,source="running").result
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2021-01-13 15:50:43,152 -  nornir.core -     INFO -        run() - Running task 'getters' with args {} on 1 hosts
+2021-01-13 15:50:49,945 - nornir.core.task -    ERROR -      start() - Host 'devnet_sbx_iosxe': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli/transport/ptyprocess.py", line 395, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 103, in _authenticate
+    new_output = self.session.read()
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli/transport/ptyprocess.py", line 400, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf_get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir/core/inventory.py", line 440, in get_connection
+    self.open_connection(
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir/core/inventory.py", line 492, in open_connection
+    conn_obj.open(
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 166, in open
+    connection.open()
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli_netconf/driver/driver.py", line 64, in open
+    login_bytes = self.transport.open_netconf()
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 38, in open_netconf
+    login_bytes = self._open_netconf_pty()
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 58, in _open_netconf_pty
+    login_bytes: bytes = self._authenticate()
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in decorate
+    return self.multiprocessing_timeout(
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli/decorators.py", line 286, in multiprocessing_timeout
+    result = future.get(timeout=self.timeout_duration)
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 107, in _authenticate
+    self._ssh_message_handler(output=output)
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli/transport/systemssh.py", line 286, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed for host ios-xe-mgmt.cisco.com
+
+2021-01-13 15:50:49,946 - nornir.core.task -    ERROR -      start() - Host 'devnet_sbx_iosxe': task 'getters' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/mr_linux/Desktop/Py_Net scripts/Nornir/NETCONF_Plugins/NETCONF_getters.py", line 11, in getters
+    result = task.run(task=netconf_get_config,source="running").result
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+
+2021-01-13 15:54:33,483 -  nornir.core -     INFO -        run() - Running task 'getters' with args {} on 1 hosts
+2021-01-13 15:54:40,263 - nornir.core.task -    ERROR -      start() - Host 'CSR1': task 'netconf_get_config' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli/transport/ptyprocess.py", line 395, in read
+    s = self.fileobj.read1(size)
+OSError: [Errno 5] Input/output error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 103, in _authenticate
+    new_output = self.session.read()
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli/transport/ptyprocess.py", line 400, in read
+    raise EOFError("End Of File (EOF). Exception style platform.")
+EOFError: End Of File (EOF). Exception style platform.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir_scrapli/tasks/netconf_get_config.py", line 31, in netconf_get_config
+    scrapli_conn = task.host.get_connection("scrapli_netconf", task.nornir.config)
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir/core/inventory.py", line 440, in get_connection
+    self.open_connection(
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir/core/inventory.py", line 492, in open_connection
+    conn_obj.open(
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir_scrapli/connection.py", line 166, in open
+    connection.open()
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli_netconf/driver/driver.py", line 64, in open
+    login_bytes = self.transport.open_netconf()
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 38, in open_netconf
+    login_bytes = self._open_netconf_pty()
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 58, in _open_netconf_pty
+    login_bytes: bytes = self._authenticate()
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli/decorators.py", line 113, in decorate
+    return self.multiprocessing_timeout(
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli/decorators.py", line 286, in multiprocessing_timeout
+    result = future.get(timeout=self.timeout_duration)
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 771, in get
+    raise self._value
+  File "/usr/lib/python3.8/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli_netconf/transport/systemssh.py", line 107, in _authenticate
+    self._ssh_message_handler(output=output)
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/scrapli/transport/systemssh.py", line 286, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Host key verification failed for host ios-xe-mgmt.cisco.com
+
+2021-01-13 15:54:40,264 - nornir.core.task -    ERROR -      start() - Host 'CSR1': task 'getters' failed with traceback:
+Traceback (most recent call last):
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir/core/task.py", line 98, in start
+    r = self.task(self, **self.params)
+  File "/home/mr_linux/Desktop/Py_Net scripts/Nornir/NETCONF_Plugins/NETCONF_getters.py", line 11, in getters
+    result = task.run(task=netconf_get_config,source="running").result
+  File "/home/mr_linux/.var/app/com.visualstudio.code-oss/data/python/lib/python3.8/site-packages/nornir/core/task.py", line 168, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: netconf_get_config (failed)
+
+

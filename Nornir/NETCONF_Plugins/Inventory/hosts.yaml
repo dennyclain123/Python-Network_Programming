@@ -1,0 +1,14 @@
+---
+CSR1:
+  hostname: ios-xe-mgmt.cisco.com
+  username: developer
+  password: C1sco12345
+  platform: ios
+  port: 10000  # sandbox uses 10000 for NETCONF
+  connection_options:
+    netconf:
+      extras:
+        allow_agent: false
+        hostkey_verify: false
+        look_for_keys: false
+

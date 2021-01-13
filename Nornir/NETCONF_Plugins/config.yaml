@@ -1,0 +1,12 @@
+---
+runner:
+   plugin: threaded
+   options:
+     num_workers: 100
+
+inventory:
+    plugin: SimpleInventory
+    options:
+        host_file: "/home/mr_linux/Desktop/Py_Net scripts/Nornir/NETCONF_Plugins/Inventory/hosts.yaml"
+        group_file: "/home/mr_linux/Desktop/Py_Net scripts/Nornir/NETCONF_Plugins/Inventory/groups.yaml"
+        defaults_file: "/home/mr_linux/Desktop/Py_Net scripts/Nornir/NETCONF_Plugins/Inventory/defaults.yaml"
