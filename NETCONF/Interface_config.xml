@@ -1,0 +1,18 @@
+<config>
+ <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+ <interface>
+ <Loopback>
+ <name>20</name>
+ <description>netconf is a whole lot of work to config an interface!!!!</description>
+ <ip>
+ <address>
+ <primary>
+ <address>20.20.20.20</address>
+ <mask>255.255.255.255</mask>
+ </primary>
+ </address>
+ </ip>
+ </Loopback>
+ </interface>
+ </native>
+</config>
