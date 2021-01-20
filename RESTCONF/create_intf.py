@@ -12,12 +12,12 @@ url = "https://ios-xe-mgmt.cisco.com:9443/restconf/data/Cisco-IOS-XE-native:nati
 data = '''
 {
 	"Cisco-IOS-XE-native:Loopback": {
-          "name": 10,
+          "name": 0,
           "description": "RESTCONF_TEST",
           "ip": {
             "address": {
               "primary": {
-                "address": "10.10.10.10",
+                "address": "1.1.1.1",
                 "mask": "255.255.255.255"
               }
             }

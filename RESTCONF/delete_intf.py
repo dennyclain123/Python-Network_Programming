@@ -7,7 +7,7 @@ USER = "developer"
 PW = "C1sco12345"
 
 url = "https://ios-xe-mgmt.cisco.com:9443/restconf/data/Cisco-IOS-XE-native:native/interface/"
-del_url = "https://ios-xe-mgmt.cisco.com:9443/restconf/data/Cisco-IOS-XE-native:native/interface/Loopback=10" 
+del_url = "https://ios-xe-mgmt.cisco.com:9443/restconf/data/Cisco-IOS-XE-native:native/interface/Loopback=99" 
 
 headers = {
   'Content-Type': 'application/yang-data+json',
