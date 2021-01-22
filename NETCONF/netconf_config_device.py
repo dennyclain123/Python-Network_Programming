@@ -6,12 +6,12 @@ config_data = '''
  <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
  <interface>
  <Loopback>
- <name>0</name>
+ <name>10</name>
  <description>netconf is a whole lot of work to config an interface!!!!</description>
  <ip>
  <address>
  <primary>
- <address>1.1.1.1</address>
+ <address>10.10.10.10</address>
  <mask>255.255.255.255</mask>
  </primary>
  </address>

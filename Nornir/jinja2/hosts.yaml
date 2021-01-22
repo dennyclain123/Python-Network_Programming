@@ -1,0 +1,24 @@
+---
+
+
+R1:
+    hostname: 192.168.122.100
+    groups:
+        - cisco_group
+    data:
+        domain: nit
+
+R2:
+    hostname: 192.168.122.200
+    groups:
+        - cisco_group
+    data:
+        domain: nit
+
+
+R3:
+    hostname: 192.168.122.210
+    groups:
+        - cisco_group
+    data:
+        domain: nit
