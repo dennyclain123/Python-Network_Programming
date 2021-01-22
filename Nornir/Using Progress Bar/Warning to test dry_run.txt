@@ -1,0 +1,3 @@
+If you want to test dry_run.py, you need to run Cisco IOSV Router on GNS3.
+If you test other ios router (C 7200), NAPALM Shows error.
+

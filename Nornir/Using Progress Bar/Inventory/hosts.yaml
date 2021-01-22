@@ -1,0 +1,15 @@
+---
+R1:
+    hostname: 192.168.122.100
+    groups: 
+        - nit_group
+
+R2:
+    hostname: 192.168.122.200
+    groups: 
+        - nit_group
+
+R3:
+    hostname: 192.168.122.210
+    groups: 
+        - nit_group
